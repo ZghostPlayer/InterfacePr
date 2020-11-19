@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
-public class Endormorfo extends AppCompatActivity {
+public class Ectomorfo extends AppCompatActivity {
 
     TextView textDig, textR, textB, textC;
     Button buttonCal;
@@ -32,19 +32,19 @@ public class Endormorfo extends AppCompatActivity {
         buttonCal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Double cal, corrida, burpee, corda, endomorfo;
+                Double cal, corrida, burpee, corda, ectomorfo;
                 cal = Double.parseDouble(editCal.getText().toString());
                 /* O valor aproximado foi calculado com base em uma pessoa mesomorfa que é a base,
-               a partir dai segundo pesquisas presupõe-se que um endomorfo precisa de 25%
-               a mais de intensidade*/
-                endomorfo = cal+(25/100*cal);
+               a partir dai segundo pesquisas presupõe-se que um ectomorfo precisa de 25%
+               a menos de intensidade*/
+                ectomorfo = cal-(25/100*cal);
 
                 // uma pessoa gasta aproximadamente 10 calorias por minuto correndo
-                corrida = endomorfo/10;
+                corrida = ectomorfo/10;
                 //uma pessoa gasta aproximadamente 1.43 calorias por burpee
-                burpee = endomorfo/1.43;
+                burpee = ectomorfo/1.43;
                 //Uma pessoa gasta aproximadamente 12 calorias por minuto pulando corda
-                corda = endomorfo/12;
+                corda = ectomorfo/12;
 
                 DecimalFormat df = new DecimalFormat("0.0");
 

@@ -7,48 +7,67 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textSelecionar"
-        android:layout_width="231dp"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="106dp"
-        android:layout_marginBottom="35dp"
-        android:text="Selecione seu biotipo:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/buttonEcto"
+        android:background="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/buttonEcto"
+
+    <TextView
+        android:id="@+id/textSelecionar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="41dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="89dp"
+        android:layout_marginBottom="86dp"
+        android:text="Selecione o seu biotipo:"
+        android:textColor="#0A2FB6"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEcto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonEndo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="112dp"
+        android:background="#8D03A9F4"
+        android:text="Endomorfo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonMeso"
+        app:layout_constraintStart_toStartOf="@+id/buttonMeso"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMeso" />
+
+    <Button
+        android:id="@+id/buttonEcto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="91dp"
+        android:background="#9203A9F4"
         android:text="Ectomorfo"
         app:layout_constraintBottom_toTopOf="@+id/buttonMeso"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonMeso"
+        app:layout_constraintStart_toStartOf="@+id/buttonMeso"
         app:layout_constraintTop_toBottomOf="@+id/textSelecionar" />
 
     <Button
         android:id="@+id/buttonMeso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="42dp"
+        android:layout_width="130dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginBottom="96dp"
+        android:background="#7E03A9F4"
         android:text="Mesomorfo"
         app:layout_constraintBottom_toTopOf="@+id/buttonEndo"
-        app:layout_constraintStart_toStartOf="@+id/buttonEcto"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonEcto" />
-
-    <Button
-        android:id="@+id/buttonEndo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="327dp"
-        android:text="Endomorfo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/buttonMeso"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMeso" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
